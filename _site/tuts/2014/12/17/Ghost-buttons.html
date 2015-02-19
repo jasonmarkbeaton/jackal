@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  Ghost Buttons. Much Button, Such Ghost. |  Parkerrr - Web Architect, Designer, Buritto Connoisseur. 
+  </title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="//use.typekit.net/ufy4cdy.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+  <div id="home">
+
+    <header>
+      <h1> I'm a Web Developer with a focus on User Experience design and data. </h1>
+    </header>
+
+    <nav role="navigation">
+       <!-- some social profile links -->
+    </nav>
+
+    <section role="Goodies" class="main">
+
+    <p>With the rise of full-image backgrounds on websites, the ghost button style has become a go-to element design to create a unique call to action button that allows the background image to be seen through the button. </p>
+
+<p>Click the link for more examples: <a href="http://websiteswithghostbuttons.tumblr.com/">Ghost Button Examples</a></p>
+
+<h3 id="so-in-this-write-up-ill-show-you-how-to-create-some-basic-ghost-button-styles-you-can-apply-to-your-site">So in this write-up, I’ll show you how to create some basic ghost button styles you can apply to your site.</h3>
+
+<p>I’ll assume that you’ve got a site built out with some links on it. Preferably a call-to-action link somewhere on your page that you’d like to apply this style to. I would suggest using this button styling sparingly. No need to go all <a href="https://www.youtube.com/watch?v=MghiBW3r65M">Bob Ross</a> on this technique. </p>
+
+<p>I’ll go over 3 styles:</p>
+
+<ul>
+  <li>A basic style</li>
+  <li>A hovered-color transition</li>
+  <li>A size transition effect</li>
+</ul>
+
+<p>We’ll start with assigning a class to your link element. Let’s call this “ghost-button”. It should look something like this:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">a</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;ghost-button&quot;</span> <span class="nt">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="o">&gt;</span><span class="nt">Clicky</span> <span class="nt">Click</span><span class="o">&lt;/</span><span class="nt">a</span><span class="o">&gt;</span></code></pre></div>
+
+<p>Let’s look at the CSS of the basic ghost button.</p>
+
+<h3 id="basic-ghost-button">Basic ghost button</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.ghost-button</span> <span class="p">{</span> 
+  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span> 
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span> 
+  <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.ghost-button</span><span class="nd">:hover</span><span class="o">,</span>
+  <span class="nc">.ghost-button</span><span class="nd">:active</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></div>
+
+<p>Here, we’re simply adding a background color and changing the color of the text to black so it will show on the (now) white background on hover and active states. Pretty simple, right? Alright, let’s turn it up a bit.</p>
+
+<h3 id="on-hover-color-transition-ghost-button">On hover-color transition ghost button</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.ghost-button</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="k">transparent</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">2px</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.ghost-button</span><span class="nd">:hover</span><span class="o">,</span>
+  <span class="nc">.ghost-button</span><span class="nd">:active</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#2a85c3</span><span class="p">;</span>
+  <span class="k">border-color</span><span class="o">:</span> <span class="m">#3fbc9f</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span></code></pre></div>
+
+<p>This applies the transition property to gradually change the background color, border color, and text color to whatever you set the values to in the hover and active states. It’s really smooth and it works on all modern browsers (including IE 10 and up).</p>
+
+<p>This last example is my favorite. it uses the same transition effect, but on the width of the element. It’s a really neat way to animate a button and put emphasis on the CTA. </p>
+
+<h3 id="size-transition-ghost-button">Size transition ghost button</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.ghost-button</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">2px</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">ghost-button</span><span class="nd">:hover</span><span class="o">,</span>
+  <span class="nt">ghost-button</span><span class="nd">:active</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">220px</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></div>
+
+<p>There are a few things you could try out on this transition effect. Like the height. Since the transition-property is set to “all”, you can optionally set the hover and active states to include a height change (or anything else you want to transition). You can conditionally set this to just width by changing the transition-property to: </p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">transition</span><span class="o">:</span> <span class="nt">width</span> <span class="nc">.3s</span> <span class="nt">ease-in-out</span><span class="o">;</span></code></pre></div>
+
+<blockquote>
+  <p>You can add any properties to the hover and active states that you want to transition, but only if you’ve set them in the parent element.  </p>
+</blockquote>
+
+<p>So we’ve explored some different ghost button styles and took advantage of the transition property. You can really go wild with this, but in the essence of minimalism, don’t. CTA’s are there to affirm your decision, not to be a distraction. Leave a comment with a link to your implementation of the ghost button, as I’d love to see what you come up with. Happy coding everyone! </p>
+
+
+
+    </section>
+
+  </div>
+</body>
+</html>

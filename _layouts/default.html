@@ -5,10 +5,12 @@
   <title> {% if page.title %} {{ page.title }} | {% endif %} Parkerrr - Web Architect, Designer, Buritto Connoisseur. 
   </title>
   <link rel="stylesheet" href="/css/style.css" />
+  <script src="//use.typekit.net/ufy4cdy.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 
-  <div id="main">
+  <div id="home">
 
     <header>
       <h1> I'm a Web Developer with a focus on User Experience design and data. </h1>
@@ -18,11 +20,12 @@
        <!-- some social profile links -->
     </nav>
 
+    <section role="Goodies" class="main">
+
     {{ content }}
 
-    <footer>
-      <!-- Something descriptive here -->
-    </footer>
+    </section>
+
   </div>
 </body>
 </html>
