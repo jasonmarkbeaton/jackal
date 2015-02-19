@@ -1,0 +1,12 @@
+# General Settings
+name:       Welcome <i>to</i> Parker
+description:  Web Architect and Designer 
+url:        "http://www.parkerrr.com"
+auto:       true
+
+#Permalinks
+permalink:  none
+
+# Social
+disqus:     parkerrr
+twitter:    thnkco
