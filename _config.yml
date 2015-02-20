@@ -1,12 +1,18 @@
-# General Settings
-name:       Welcome <i>to</i> Parker
-description:  Web Architect and Designer 
-url:        "http://www.parkerrr.com"
-auto:       true
+# Permalinks
+highlighter: pygments
+permalink:        pretty
+relative_permalinks: true
 
-#Permalinks
-permalink:  none
+# Setup
+title:            Jason Beaton - Developer and Designer
+tagline:          'A Jekyll theme by Parkerrr'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              localhost
+baseurl:          /
 
-# Social
-disqus:     parkerrr
-twitter:    thnkco
+author:
+  name:           'Jason Beaton'
+  url:            https://twitter.com/thnkco
+
+paginate:         10
+

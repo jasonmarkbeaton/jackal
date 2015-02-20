@@ -12,19 +12,25 @@
 </head>
 <body>
 
+  <header class="home">
+
+    <header>
+    <h1><a href="#about" title="Jason Beaton - Web Developer & Designer">{{ site.title }}</a></h1>
+      <p> I'm a Web Developer with a focus on User Experience design and data. </p>
+    }
+    }
+    </header>
+
+    <nav role="navigation">
+    <a href="{{ twitter_profile }}">Twitter</a>
+    <a href="{{ github_profile }}">Github</a>
+    <a href="{{ dribbble_profile }}">Dribbble</a>
+       <!-- some social profile links -->
+    </nav>
+    </header>
+
     {{ content }}
 
-{% include footer.html %}
 <script src="/js/readingTime.min.js"></script>
-<script src="/js/time.js"></script>
-<script>
-$(function() {
-      
-        $('article').readingTime({
-          wordCountTarget: '.words',
-        });
-        
-      });
-</script>
 </body>
 </html>

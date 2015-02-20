@@ -4,16 +4,21 @@
   <meta charset=utf-8 />
   <title>  Parkerrr - Web Architect, Designer, Buritto Connoisseur. 
   </title>
-  <script src="//use.typekit.net/ufy4cdy.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+<!--   <script src="//use.typekit.net/ufy4cdy.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script> -->
   <link rel="stylesheet" href="/css/style.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
 </head>
 <body>
 
-  <div id="home">
+  <header class="home">
 
     <header>
-      <h1> I'm a Web Developer with a focus on User Experience design and data. </h1>
+    <h1><a href="#about" title="Jason Beaton - Web Developer & Designer">Jason Beaton - Developer and Designer</a></h1>
+      <p> I'm a Web Developer with a focus on User Experience design and data. </p>
+    }
+    }
     </header>
 
     <nav role="navigation">
@@ -22,18 +27,68 @@
     <a href="">Dribbble</a>
        <!-- some social profile links -->
     </nav>
+    </header>
 
-    <section role="Goodies" class="main">
-
-    <nav class="tabs">
-  <a href="#">Work</a>
-  <a href="#">Thoughts</a>
+    <section class="main">
+<nav class="tabs">
+  <a href="#work">Work</a>
+  <a href="#thoughts">Thoughts</a>
 </nav>
 
+<ul class="posts">
+  <li>
+    <a href="/work/2015/02/19/Testing-a-thing/" class="type--work">
+    <span class="type">work</span>
+    <h2>Testing A Thing</h2>
+    </a>
+    <div class="eta"></div>
+  </li>
+</ul>
+
+<ul class="posts">
+  <li>
+    <a href="/thoughts/2015/01/15/Traversing-jquery/" class="type--thoughts">
+    <span class="type">thoughts</span>
+    <h2>Traversing Jquery</h2>
+    </a>
+    <div class="eta"></div>
+  </li>
+</ul>
+
+<ul class="posts">
+  <li>
+    <a href="/work/2014/12/17/Ghost-buttons/" class="type--work">
+    <span class="type">work</span>
+    <h2>Ghost Buttons</h2>
+    </a>
+    <div class="eta"></div>
+  </li>
+</ul>
+
+<ul class="posts">
+  <li>
+    <a href="/thoughts/2014/12/02/Getting-Started/" class="type--thoughts">
+    <span class="type">thoughts</span>
+    <h2>Getting Started</h2>
+    </a>
+    <div class="eta"></div>
+  </li>
+</ul>
+
+</section>
 
 
-    </section>
-
-  </div>
+<script src="/js/readingTime.min.js"></script>
+<script>
+$(function() {
+        
+        $('body').readingTime({
+          wordCountTarget: '.words',
+          remotePath: '.html',
+          remoteTarget: 'article'
+        });
+        
+      });
+</script>
 </body>
 </html>
